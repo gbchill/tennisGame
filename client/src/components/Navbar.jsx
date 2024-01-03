@@ -1,12 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-const Section = styled.div`
-  width: 100%;
-  background-color: black;
-  border-bottom: 4px solid rgba(255, 255, 255, 0.8); /* Adjust border color and thickness */
-`;
+import Example2 from "./Example2";
 
 const Container = styled.div`
   width: 1400px;
@@ -20,36 +15,34 @@ const Container = styled.div`
 const Links = styled.div`
   display: flex;
   align-items: center;
-  gap: 50px;
 `;
 
 const Logo = styled.img`
-  height: 50px;
+  height: 60px;
+  margin-right: 20px; /* Adjust this margin to add space between the logo and list items */
 `;
 
 const List = styled.ul`
   display: flex;
   gap: 20px;
   list-style: none;
+  padding-left: 110px;
 `;
 
 const ListItem = styled.li`
   cursor: pointer;
   color: white;
-  position: relative; /* Added position for absolute positioning */
+  position: relative;
+  font-size: 18px; /* Increase the font size as desired */
 
-  &:hover {
-    color: #a2c523;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -4px; /* Adjust this value to align with the bottom border */
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background-color: #a2c523;
-    }
+  &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust this value to set the distance of the underline from text */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Set the height of the underline */
+    background-color: white; /* White underline color */
   }
 `;
 
@@ -71,23 +64,21 @@ const Button = styled.button`
 
 const Navbar = () => {
   return (
-    <Section>
-      <Container>
-        <Links>
-          <Logo src="./img/logo.png" />
-          <List>
-            <ListItem>Home</ListItem>
-            <ListItem>About</ListItem>
-            <ListItem>How to Play</ListItem>
-          </List>
-        </Links>
-        <Icons>
-          <Link className="" to={'/game'}>
-            <Button>Play Game</Button>
-          </Link>
-        </Icons>
-      </Container>
-    </Section>
+    <Container>
+      <Links>
+        <Logo src="./img/logo.png" />
+        <List>
+          <ListItem>Home</ListItem>
+          <ListItem>About</ListItem>
+          <ListItem>How to Play</ListItem>
+        </List>
+      </Links>
+      <Icons>
+        <Link className="" to={'/game'}>
+          <Example2/>
+        </Link>
+      </Icons>
+    </Container>
   );
 };
 
