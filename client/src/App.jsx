@@ -2,7 +2,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import IndexPage from './pages/IndexPage';
-import GamesPage from './pages/GamesPage';
+import GamePage from './pages/GamePage'
+
+
 
 
 
@@ -20,7 +22,7 @@ function App() {
       <Routes>
         {/* Creates routes for different locations in the app */}
         <Route index element={<IndexPage />} /> // Define the index page route
-        <Route path="/game" element={<GamesPage />} />
+        <Route path="/game" element={<GamePage/>} />
       </Routes>
     </UserContextProvider>
   );
