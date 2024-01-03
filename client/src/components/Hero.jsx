@@ -1,8 +1,10 @@
 import React, { Suspense } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import Example from "./Example";
 
 const Section = styled.div`
   height: 100vh;
@@ -130,7 +132,9 @@ const Hero = () => {
           <Desc>
           Serve, volley, and triumph in our thrilling tennis game. Engage in fast-paced matches, showcase your skills, and conquer opponents in this immersive gaming experience!
           </Desc>
-          <Button>Play Now</Button>
+          <Link className="" to={'/game'}>
+          <Example/>
+          </Link>
         </Left>
         <Right>
           <Canvas>
@@ -156,3 +160,10 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
+
+
+  

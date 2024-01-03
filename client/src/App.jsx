@@ -1,25 +1,16 @@
 import styled from "styled-components";
-import Hero from "./components/Hero";
+import { Routes, Route } from 'react-router-dom';
+import IndexPage from "./pages/IndexPage";
+import GamePage from "./pages/GamePage";
 
-
-const Container = styled.div`
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: auto;
-  scrollbar-width: none;
-  color: white;
-  background: url("./img/bg.jpeg");
-  &::-webkit-scrollbar{
-    display: none;
-  }
-`;
 
 function App() {
   return (
-    <Container>
-      <Hero />
-    </Container>
+     <Routes>
+     {/* Creates routes for different locations in the app */}
+     <Route index element={<IndexPage/>} /> // Define the index page route
+     <Route path="/game" element={<GamePage/>} />
+   </Routes>
   );
 }
 

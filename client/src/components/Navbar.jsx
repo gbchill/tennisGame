@@ -1,13 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Section = styled.div`
-  display: flex;
-  justify-content: center;
-
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
+  width: 100%;
+  background-color: black;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.8); /* Adjust border color and thickness */
 `;
 
 const Container = styled.div`
@@ -16,11 +14,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
-
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-    padding: 10px;
-  }
+  margin: 0 auto;
 `;
 
 const Links = styled.div`
@@ -37,14 +31,26 @@ const List = styled.ul`
   display: flex;
   gap: 20px;
   list-style: none;
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 const ListItem = styled.li`
   cursor: pointer;
+  color: white;
+  position: relative; /* Added position for absolute positioning */
+
+  &:hover {
+    color: #a2c523;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -4px; /* Adjust this value to align with the bottom border */
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #a2c523;
+    }
+  }
 `;
 
 const Icons = styled.div`
@@ -53,15 +59,10 @@ const Icons = styled.div`
   gap: 20px;
 `;
 
-const Icon = styled.img`
-  width: 20px;
-  cursor: pointer;
-`;
-
 const Button = styled.button`
   width: 100px;
   padding: 10px;
-  background-color: #A2C523;
+  background-color: #a2c523;
   color: white;
   border: none;
   border-radius: 5px;
@@ -81,9 +82,9 @@ const Navbar = () => {
           </List>
         </Links>
         <Icons>
-          {/* Changed the image due to copyright problems */}
-
-          <Button>Play Game</Button>
+          <Link className="" to={'/game'}>
+            <Button>Play Game</Button>
+          </Link>
         </Icons>
       </Container>
     </Section>
