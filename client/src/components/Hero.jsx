@@ -46,32 +46,22 @@ const Left = styled.div`
     align-items: center;
   }
 `;
-
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 48px;
+  font-weight: 300; /* Adjust the font weight to make the letters thinner */
+  font-family: 'Arial', sans-serif;
+
 
   @media only screen and (max-width: 768px) {
+    font-size: 36px;
     text-align: center;
   }
 `;
 
-const WhatWeDo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-const Line = styled.img`
-  height: 5px;
-`;
-
-const Subtitle = styled.h2`
-  color: #da4ea2;
-`;
 
 const Desc = styled.p`
-  font-size: 24px;
-  color: lightgray;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
   @media only screen and (max-width: 768px) {
     padding: 20px;
     text-align: center;

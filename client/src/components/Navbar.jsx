@@ -24,7 +24,7 @@ const Logo = styled.img`
 
 const List = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 45px;
   list-style: none;
   padding-left: 110px;
 `;
