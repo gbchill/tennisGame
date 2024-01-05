@@ -41,6 +41,7 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
   padding-left: 40px;
+  padding-bottom: 40px;
 
   @media only screen and (max-width: 768px) {
     flex: 1;

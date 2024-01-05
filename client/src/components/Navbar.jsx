@@ -8,7 +8,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
 `;
