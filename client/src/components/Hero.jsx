@@ -40,17 +40,18 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  padding-left: 40px;
 
   @media only screen and (max-width: 768px) {
     flex: 1;
     align-items: center;
   }
 `;
+
 const Title = styled.h1`
   font-size: 48px;
-  font-weight: 300; /* Adjust the font weight to make the letters thinner */
-  font-family: 'Arial', sans-serif;
-
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif; /* Change 'Roboto' to the desired font-family name */
 
   @media only screen and (max-width: 768px) {
     font-size: 36px;
@@ -58,30 +59,23 @@ const Title = styled.h1`
   }
 `;
 
-
 const Desc = styled.p`
   font-size: 20px;
-  font-family: 'Arial', sans-serif;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif; /* Change 'Roboto' to the desired font-family name */
+
   @media only screen and (max-width: 768px) {
     padding: 20px;
     text-align: center;
   }
 `;
 
-const Button = styled.button`
-  background-color: #A2C523;
-  color: white;
-  font-weight: 500;
-  width: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
+
 
 const Right = styled.div`
   flex: 3;
   position: relative;
+
   @media only screen and (max-width: 768px) {
     flex: 1;
     width: 100%;
@@ -112,18 +106,28 @@ const Img = styled.img`
   }
 `;
 
+const Button = styled.button`
+  width: 100px;
+  padding: 10px;
+  background-color: black; /* Change the background color to black */
+  color: white; /* Set text color to white */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
 const Hero = () => {
   return (
     <Section>
       <Navbar />
       <Container>
-        <Left>
+      <Left>
           <Title>Court Clash</Title>
           <Desc>
-          Serve, volley, and triumph in our thrilling tennis game. Engage in fast-paced matches, showcase your skills, and conquer opponents in this immersive gaming experience!
+            Serve, volley, and triumph in our thrilling tennis game. Engage in fast-paced matches, showcase your skills, and conquer opponents in this immersive gaming experience!
           </Desc>
           <Link className="" to={'/game'}>
-          <Example/>
+            <Button>Play Now</Button>
           </Link>
         </Left>
         <Right>
@@ -151,9 +155,3 @@ const Hero = () => {
 
 export default Hero;
 
-
-
-
-
-
-  

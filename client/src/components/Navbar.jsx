@@ -10,6 +10,7 @@ const Container = styled.div`
   align-items: center;
   padding: 10px 0px;
   margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const Links = styled.div`
@@ -18,8 +19,8 @@ const Links = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 60px;
-  margin-right: 20px; /* Adjust this margin to add space between the logo and list items */
+  height: 80px; /* Increase the height of the logo */
+  margin-right: 20px;
 `;
 
 const List = styled.ul`
@@ -33,16 +34,18 @@ const ListItem = styled.li`
   cursor: pointer;
   color: white;
   position: relative;
-  font-size: 18px; /* Increase the font size as desired */
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
 
   &:hover::after {
     content: "";
     position: absolute;
-    bottom: -2px; /* Adjust this value to set the distance of the underline from text */
+    bottom: -2px;
     left: 0;
     width: 100%;
-    height: 2px; /* Set the height of the underline */
-    background-color: white; /* White underline color */
+    height: 2px;
+    background-color: white;
   }
 `;
 
@@ -50,6 +53,10 @@ const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
 
 const Button = styled.button`
@@ -66,16 +73,24 @@ const Navbar = () => {
   return (
     <Container>
       <Links>
-        <Logo src="./img/logo.png" />
+        <StyledLink className="" to={'/'}>
+          <Logo src="./img/logo.png" />
+        </StyledLink>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>About</ListItem>
-          <ListItem>How to Play</ListItem>
+          <StyledLink className="" to={'/'}>
+            <ListItem>Home</ListItem>
+          </StyledLink>
+          <StyledLink className="" to={'/about'}>
+            <ListItem>About</ListItem>
+          </StyledLink>
+          <StyledLink className="" to={'/rules'}>
+            <ListItem>How to Play</ListItem>
+          </StyledLink>
         </List>
       </Links>
       <Icons>
         <Link className="" to={'/game'}>
-          <Example2/>
+          <Example2 />
         </Link>
       </Icons>
     </Container>
