@@ -18,9 +18,9 @@ const Container = styled.div`
 
 function GamePage() {
   return (
- 
+    <Container>
       <Navbar/>
- 
+    </Container>
   );
 }
 
