@@ -123,12 +123,12 @@ const Hero = () => {
       <Navbar />
       <Container>
       <Left>
-          <Title>Court Clash</Title>
+          <Title>AceMind Tennis</Title>
           <Desc>
-            Serve, volley, and triumph in our thrilling tennis game. Engage in fast-paced matches, showcase your skills, and conquer opponents in this immersive gaming experience!
+          Welcome to 'AceMind Tennis': See AI learning tennis live! Filter through 10 to 1,000 tests and watch the AI improve against human or ball machine opponents. Witness the evolution of AI tennis skills in real-time! Join us in shaping AI tennis mastery at AceMind Tennis!
           </Desc>
           <Link className="" to={'/game'}>
-            <Button>Play Now</Button>
+            <Button>Try Now</Button>
           </Link>
         </Left>
         <Right>
