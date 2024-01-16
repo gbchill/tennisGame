@@ -15,7 +15,7 @@ const Container = styled.div`
   }
 `;
 
-function IndexPage() {
+function GamePage() {
   return (
     <Container>
       <Navbar />
@@ -30,4 +30,4 @@ function IndexPage() {
   );
 }
 
-export default IndexPage;
+export default GamePage;
