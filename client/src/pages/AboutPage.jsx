@@ -52,18 +52,18 @@ function AboutPage() {
           intelligence and the sport of tennis with AceMind Tennis. Our Unity
           game is more than just an interactive experience; it's a showcase of
           cutting-edge technology and dynamic gameplay.
-       
+
           At the heart of AceMind Tennis lies a sophisticated AI system driven
           by reinforcement learning. The AI evolves and adapts based on its
           interactions on the digital tennis court, offering players an
           ever-challenging opponent that learns and improves with every match.
-        
+
           Customize your gaming experience by adjusting the difficulty level to
           match your skills. Additionally, choose how many days the AI has been
           trained, providing you with a personalized and dynamic gaming
           challenge.
-        
-  
+
+
           Immerse yourself in the world of AceMind Tennis, where the thrill of
           tennis meets the excitement of artificial intelligence. Are you ready
           to take on the challenge and test your skills against our evolving AI
